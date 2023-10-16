@@ -1,16 +1,16 @@
 import {script} from '@digshare/script';
 
-interface State {
-  count: number;
+interface State {}
+
+interface Params {
+  version: string;
 }
 
-export default script<State>(async (state = {count: 0}) => {
-  state.count += 1;
-
+export default script<State, Params>(async (_state, {params: {version}}) => {
   return {
-    // 消息内容
-    message: `这是第 ${state.count} 次执行`,
-    // 更新状态
-    state,
+    message: {
+      title: '部署成功',
+      content: `当前版本 ${version}。`,
+    },
   };
 });

@@ -3,9 +3,6 @@
   "version": "0.0.0",
   "type": "module",
   "exports": "./src/script.ts",
-  "dss": {
-    "schedule": "rate(1d)"
-  },
   "dependencies": {
     "@digshare/script": "0.4"
   },
