@@ -1,0 +1,9 @@
+# General
+.DS_Store
+*.tgz
+node_modules/
+# Config
+.dssrc
+# Build Artifacts
+.local/
+out/
